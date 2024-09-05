@@ -1,6 +1,4 @@
-import React from "react";
 import Blogcard from "../Components/Blogcard";
-import Appbar from "../Components/Appbar";
 
 import Useblogs from "../Hooks/Useblogs";
 import Skeleton from "../Components/Skeleton";

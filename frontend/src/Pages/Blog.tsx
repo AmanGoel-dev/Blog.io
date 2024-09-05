@@ -1,8 +1,6 @@
-import React from "react";
 import UserBlog from "../Hooks/UserBlog";
 import { useParams } from "react-router-dom";
 import FullBlog from "../Components/FullBlog";
-import Appbar from "../Components/Appbar";
 
 const Blog = () => {
   const { id } = useParams();

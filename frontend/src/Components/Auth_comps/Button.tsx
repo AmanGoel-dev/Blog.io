@@ -1,6 +1,6 @@
-import React, { MouseEvent } from "react";
+import { MouseEvent } from "react";
 import { Link } from "react-router-dom";
-import Signup from "../../Pages/Signup";
+
 interface props {
   login: boolean;
   onclick: (e: MouseEvent<HTMLDivElement>) => void;

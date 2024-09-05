@@ -1,5 +1,3 @@
-import React from "react";
-
 import Quote from "../Components/Quote";
 import LoginAuth from "../Components/LoginAuth";
 

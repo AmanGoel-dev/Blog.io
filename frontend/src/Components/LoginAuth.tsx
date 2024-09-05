@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useState } from "react";
+import { ChangeEvent, useState } from "react";
 import Heading from "./Auth_comps/Heading";
 import Subheading from "./Auth_comps/Subheading";
 import Inputemail from "./Auth_comps/InputEmail";
