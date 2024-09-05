@@ -31,6 +31,14 @@ const Blog = () => {
       </div>
     );
   }
+  if (!blog) {
+    return (
+      <div className=" m-12 flex justify-center items-center  ">
+        <div className=" text-3xl font-bold border-2 p-4 ">Blog not found.</div>
+        ;
+      </div>
+    );
+  }
 
   return (
     <div>

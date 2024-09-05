@@ -5,18 +5,18 @@ import { Backend_Url } from "../../config";
 interface UserBlogparams {
   id: string | undefined;
 }
-const UserBlog = ({ id }: UserBlogparams) => {
-  interface blogprops {
-    title: string;
-    content: string;
-    id: string;
-    author: {
-      name: string;
-    };
-  }
 
+interface blogprops {
+  title: string;
+  content: string;
+  id: string;
+  author: {
+    name: string;
+  };
+}
+const UserBlog = ({ id }: UserBlogparams) => {
   const [loading, isloading] = useState(true);
-  const [blog, setblog] = useState<blogprops>({});
+  const [blog, setblog] = useState<blogprops>();
 
   useEffect(() => {
     const fetchdata = async () => {
