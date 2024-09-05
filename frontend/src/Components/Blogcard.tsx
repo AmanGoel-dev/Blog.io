@@ -31,9 +31,10 @@ const Blogcard = ({
         </div>
         <div className=" pl-2 text-2xl font-bold">{title}</div>
         <div className=" space-y-5">
-          <div className=" pl-2 text-lg font-normal  text-gray-800 font-serif">
-            {content.slice(0, 100) + "...."}
-          </div>
+          <div
+            dangerouslySetInnerHTML={{ __html: content.slice(0, 100) }}
+            className=" pl-2 text-lg font-normal  text-gray-800 font-serif"
+          ></div>
           <div className=" pl-2 text-slate-500 font-thin text-sm">{`${Math.ceil(
             content.length / 100
           )} minutes `}</div>

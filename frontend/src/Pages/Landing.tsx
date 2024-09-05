@@ -1,4 +1,3 @@
-import React from "react";
 import image from "../Utils/personal-blog.jpg";
 import { Link } from "react-router-dom";
 
@@ -6,7 +5,9 @@ const Landing = () => {
   return (
     <div className=" grid grid-cols-2 m-10 ">
       <div className=" m-10 space-y-9 flex  justify-center  flex-col">
-        <div className=" text-8xl font-mono font-bold">Blog.io</div>
+        <div className=" animate-bounce text-8xl font-mono font-bold">
+          Blog.io
+        </div>
         <div className=" text-4xl text-slate-500 ">
           Share your stories ideas,experiences with the world
         </div>

@@ -1,4 +1,3 @@
-import React, { ChangeEvent, useState } from "react";
 import Heading from "./Auth_comps/Heading";
 import Subheading from "./Auth_comps/Subheading";
 import Input from "./Auth_comps/Input";
@@ -9,6 +8,7 @@ import { SignupType } from "amangoeldev-blog";
 import axios from "axios";
 import { Backend_Url } from "../../config";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const Auth = () => {
   const [signupInputs, SetsignupInputs] = useState<SignupType>({
@@ -27,12 +27,14 @@ const Auth = () => {
       const jwt = response.data.token;
       localStorage.setItem("token", jwt);
       navigate("/blogs");
-    } catch (error) {
-      console.log("request failed to backend");
+    } catch (error: any) {
+      if (error.response.status === 400) {
+        alert("invalid credentials");
+      }
     }
   };
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     SetsignupInputs((c) => ({ ...c, [e.target.name]: e.target.value }));
   };
 
