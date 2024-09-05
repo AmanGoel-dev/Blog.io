@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Landing = () => {
   return (
-    <div className=" grid grid-cols-2 m-10 ">
+    <div className=" grid grid-cols-1 md:grid-cols-2 m-10 ">
       <div className=" m-10 space-y-9 flex  justify-center  flex-col">
         <div className=" animate-bounce text-8xl font-mono font-bold">
           Blog.io
